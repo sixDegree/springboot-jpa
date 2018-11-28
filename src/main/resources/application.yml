@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo1?characterEncoding=utf8&useSSL=false
+    username: cj
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate.format_sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false  
+    default-property-inclusion: NON_EMPTY
+
+#logging:
+#  level:
+#    org.hibernate.SQL: debug
+#    org.hibernate.type: trace    
+    
